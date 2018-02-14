@@ -5,6 +5,10 @@ This is a reoccuring problem that I face in every app, mostly the layout changes
 Steps to run the app
 
 npm install
-cd semantic && gulp build
-mv .\semantic\dist\ ./src/css
+
+cd semantic && gulp build 
+
+mv .\semantic\dist\ ./src/css 
+
+
 npm run start

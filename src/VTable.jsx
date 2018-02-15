@@ -4,7 +4,6 @@ import cn from 'classnames';
 import styles from './ScrollSync.example.css';
 import scrollbarSize from 'dom-helpers/util/scrollbarSize';
 import { ScrollSync, Grid,AutoSizer } from 'react-virtualized'
-import ctstyles from './ContentBox.css';
 import {
     ContentBox
   } from './ContentBox';
@@ -79,9 +78,9 @@ export default class GridExample extends PureComponent {
                 const middleColor = '#ffffff';
 
                 return (
-                <div className={styles.GridRow}>
+                <div className="GridRow">
                     <div
-                    className={styles.LeftSideGridContainer}
+                    className="LeftSideGridContainer"
                     style={{
                         position: 'absolute',
                         left: 0,
@@ -93,7 +92,7 @@ export default class GridExample extends PureComponent {
                     }}>
                     <Grid
                         cellRenderer={this._renderLeftHeaderCell}
-                        className={styles.HeaderGrid}
+                        className="HeaderGrid"
                         width={columnWidth}
                         height={rowHeight}
                         rowHeight={rowHeight}
@@ -103,7 +102,7 @@ export default class GridExample extends PureComponent {
                     />
                     </div>
                     <div
-                    className={styles.LeftSideGridContainer}
+                    className="LeftSideGridContainer"
                     style={{
                         position: 'absolute',
                         left: 0,
@@ -119,7 +118,7 @@ export default class GridExample extends PureComponent {
                         cellRenderer={this._renderLeftSideCell}
                         columnWidth={columnWidth}
                         columnCount={1}
-                        className={styles.LeftSideGrid}
+                        className="LeftSideGrid"
                         height={height - scrollbarSize()}
                         rowHeight={rowHeight}
                         rowCount={rowCount}
@@ -127,7 +126,7 @@ export default class GridExample extends PureComponent {
                         width={columnWidth}
                     />
                     </div>
-                    <div className={styles.GridColumn}>
+                    <div className="GridColumn">
                     <AutoSizer disableHeight>
                         {({width}) => (
                         <div>
@@ -141,7 +140,7 @@ export default class GridExample extends PureComponent {
                                 width: width - scrollbarSize(),
                             }}>
                             <Grid
-                                className={styles.HeaderGrid}
+                                className="HeaderGrid"
                                 columnWidth={columnWidth}
                                 columnCount={columnCount}
                                 height={rowHeight}
@@ -163,7 +162,7 @@ export default class GridExample extends PureComponent {
                                 width,
                             }}>
                             <Grid
-                                className={styles.BodyGrid}
+                                className="BodyGrid"
                                 columnWidth={columnWidth}
                                 columnCount={columnCount}
                                 height={height}
@@ -206,7 +205,7 @@ export default class GridExample extends PureComponent {
 
   _renderLeftHeaderCell({columnIndex, key, style}) {
     return (
-      <div className={styles.headerCell} key={key} style={style}>
+        <div className={styles.headerCell} key={key} style={style}>
         {`C${columnIndex}`}
       </div>
     );

@@ -4,7 +4,7 @@ import styles from './ContentBox.css';
 
 export function ContentBox({className, children, style}) {
     return (
-      <div className={cn(styles.ContentBox, className)} style={style}>
+      <div className="ContentBox" style={style}>
         {children}
       </div>
     );

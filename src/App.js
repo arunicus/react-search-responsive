@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Home from "./Home"
 import Results from './Results'
+import VTable from "./VTable";
 import { Container, Header, Icon, Image } from 'semantic-ui-react'
+import 'react-virtualized/styles.css'
 
 class App extends Component {
   render() {
@@ -15,7 +17,7 @@ class App extends Component {
         </Header>
 
         <Home />
-        <Results />
+        <VTable />
       </Container>
     );
   }
